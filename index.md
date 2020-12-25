@@ -30,7 +30,7 @@ referred. Following a brief explanation of the attributes used for the analysis:
 </ul>
 To avoid the slowness of page loading, as consequence of the weight of the whole dataset, it has been filterea Jupyter 
 Python Notebook to delete the rows and the columns that have not been used in the specific visualisation. 
-The data-sets of filtered data and the code used to obtain them have been uploaded on [this]("https://gitantoniolch/KickstarterProjectDetails") Github Repository.
+The data-sets of filtered data and the code used to obtain them have been uploaded [here]("https://github.com/antoniolch/KickstarterProjectDetails/blob/master/data/data_filtering.ipynb").
 
 # Visualisation 1
 
