@@ -1,0 +1,194 @@
+I"�"<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+
+<h1 id="the-project">The Project</h1>
+
+<p>This project has been made during my study period abroad and concerning the rules of making a good visualisation. It is divided into three section, all of them regard a simple analysis that comes up whating a visualisation made over a Kickstart dataset.</p>
+
+<p>More secifically, the dataset that could be taken <a href="https://www.kaggle.com/kemical/kickstarter-projects#ks-projects-201801.csv">here</a> contains information and details about the Kickstarter Projects  undertaken from 2009 to 2017. It is very detailed and constains information about  the money goal and those pledged, the dates of start and deadllines as well.</p>
+
+<p>All the visualisations have been made using the <a href="https://vega.github.io/vega-lite/">VegaLite</a> framework.</p>
+
+<h1 id="dataset-description">Dataset Description</h1>
+<p>The dataset used, from the two available on the Kaggle Repository, was the “ks-project-201801.csv” because, as the title 
+suggests and as well as data exploration comes up, it concerns data from 2009 to 2017. The other one available, instead, contains 
+data from 2009 to 2016. Furthermore, this choice has also been made due to the presence of the columns “usd real” and 
+“usd goal real” which meaning is explained below. The dataset contains information and details about the KickProjects. 
+Being more specific, each line is referred to a particular project and for each one of them there are ainformation about the project 
+referred. Following a brief explanation of the attributes used for the analysis:</p>
+<ul>
+  <li>The <i>name</i> of the Project;</li>
+  <li>The <i>main category</i>  in which the project is collocated;</li>
+  <li>The <i>category</i> that represent a sub-category in the wider main category;</li>
+  <li>The <i>launched</i> that represents the date in which the project was launched;</li>
+  <li>The <i>state</i> that denotes if the project has been successful (i.e. the case in which the money 
+    pledged were higher than the goal), failed (i.e. the case in which the money pledged were lower than the goal), cancelled, live, suspended and undefined.</li>
+  <li>The <i>backers</i> which represents the number of people that support this project;</li>
+  <li>The <i>usd_pledged_real</i> which is, considering that not all the projects use the same currency, the conversion of the USD dollars of the pledged column;</li>
+  <li>The <i>usd_goal_real</i> which is, as the usd_pledged_real, the conversion of the USD dollars of the pledged column.</li>
+</ul>
+<p>To avoid the slowness of page loading, as consequence of the weight of the whole dataset, it has been filterea Jupyter 
+Python Notebook to delete the rows and the columns that have not been used in the specific visualisation. 
+The data-sets of filtered data and the code used to obtain them have been uploaded on <a href="&quot;https://gitantoniolch/KickstarterProjectDetails&quot;">this</a> Github Repository.</p>
+
+<h1 id="visualisation-1">Visualisation 1</h1>
+
+<h2 id="initial-question">Initial Question</h2>
+<p>Considering the successful projects, which is the <i>Main Category</i> with the greatest number of them? Did it also have the greatest number of <i>Backers</i> and of <i>Money Pledged</i>?</p>
+<h1 id="visualisation-2">Visualisation 2</h1>
+
+<h2 id="initial-question-1">Initial Question</h2>
+
+<h1 id="visualisation-3">Visualisation 3</h1>
+
+<h2 id="initial-question-2">Initial Question</h2>
+
+<blockquote>
+  <p>This is a blockquote following a header.</p>
+
+  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
+
+<h3 id="header-3">Header 3</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h4 id="header-4">Header 4</h4>
+
+<ul>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+</ul>
+
+<h5 id="header-5">Header 5</h5>
+
+<ol>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+</ol>
+
+<h6 id="header-6">Header 6</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">head1</th>
+      <th style="text-align: left">head two</th>
+      <th style="text-align: left">three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good swedish fish</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">out of stock</td>
+      <td style="text-align: left">good and plenty</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
+      <td style="text-align: left">hmm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
+      <td style="text-align: left">yumm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+
+<hr />
+
+<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+
+<ul>
+  <li>Item foo</li>
+  <li>Item bar</li>
+  <li>Item baz</li>
+  <li>Item zip</li>
+</ul>
+
+<h3 id="and-an-ordered-list">And an ordered list:</h3>
+
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+</ol>
+
+<h3 id="and-a-nested-list">And a nested list:</h3>
+
+<ul>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item
+        <ul>
+          <li>level 3 item</li>
+          <li>level 3 item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item</li>
+</ul>
+
+<h3 id="small-image">Small image</h3>
+
+<p><img src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="Octocat" /></p>
+
+<h3 id="large-image">Large image</h3>
+
+<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="Branching" /></p>
+
+<h3 id="definition-lists-can-be-used-with-html-syntax">Definition lists can be used with HTML syntax.</h3>
+
+<dl>
+<dt>Name</dt>
+<dd>Godzilla</dd>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Birthplace</dt>
+<dd>Japan</dd>
+<dt>Color</dt>
+<dd>Green</dd>
+</dl>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+</code></pre></div></div>
+:ET
