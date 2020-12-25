@@ -3,10 +3,9 @@ layout: default
 ---
 
 # The Project
+This project has been made during my study period abroad and concerning the rules of making a good visualisation. It is divided into three section, all of them regard a simple analysis that comes up whatching a visualisation made over a Kickstart dataset.
 
-This project has been made during my study period abroad and concerning the rules of making a good visualisation. It is divided into three section, all of them regard a simple analysis that comes up whating a visualisation made over a Kickstart dataset.
-
-More secifically, the dataset that could be taken [here](https://www.kaggle.com/kemical/kickstarter-projects#ks-projects-201801.csv) contains information and details about the Kickstarter Projects  undertaken from 2009 to 2017. It is very detailed and constains information about  the money goal and those pledged, the dates of start and deadllines as well.
+More secifically, the dataset that could be taken [here](https://www.kaggle.com/kemical/kickstarter-projects#ks-projects-201801.csv) contains information and details about the Kickstarter Projects  undertaken from 2009 to 2017. It is very detailed and contains information about  the money goal and those pledged, the dates of start and deadllines as well.
 
 All the visualisations have been made using the [VegaLite](https://vega.github.io/vega-lite/) framework.
 
