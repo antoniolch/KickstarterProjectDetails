@@ -1,0 +1,157 @@
+<html>
+   <head>
+      <title> Antonio La Chimea - Assignment</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
+      <style>
+         body {
+         font-family: sans-serif;
+         }
+      </style>
+   </head>
+   <body>
+      <table style="width: 850px;" cellspacing="5" cellpadding="5">
+         <tbody>
+            <tr>
+               <td style="width: 200px; vertical-align: top;"><strong>Name:&nbsp;</strong></td>
+               <td style="vertical-align: top;">Antonio La Chimea</td>
+            </tr>
+            <tr>
+               <td style="vertical-align: top;"><strong>Student Number:</strong></td>
+               <td style="vertical-align: top;">19207284</td>
+            </tr>
+            <tr>
+               <td style="vertical-align: top;"><strong>Dataset description:</strong></td>
+               <td style="vertical-align: top;"> 
+                  <a href = "https://www.kaggle.com/kemical/kickstarter-projects#ks-projects-201801.csv">Kickstarter Projects</a href></br>
+                     The dataset used, from the two available on the Kaggle Repository, was the "ks-project-201801.csv" because, as the title 
+                suggests and as well as data exploration comes up, it concerns data from 2009 to 2017. The other one available, instead, contains 
+                data from 2009 to 2016. Furthermore, this choice has also been made due to the presence of the columns "usd pledged real" and 
+                "usd goal real" which meaning is explained below. The dataset contains information and details about the Kickstarter Projects. 
+                Being more specific, each line is referred to a particular project and for each one of them there are a lot of information about the project 
+                referred. Following a brief explanation of the attributes used for the analysis:
+                <ul>
+                  <li>The <i>name</i> of the Project;</li>
+                  <li>The <i>main category</i>  in which the project is collocated;</li>
+                  <li>The <i>category</i> that represent a sub-category in the wider main category;</li>
+                  <li>The <i>launched</i> that represents the date in which the project was launched;</li>
+                  <li>The <i>state</i> that denotes if the project has been successful (i.e. the case in which the money 
+                    pledged were higher than the goal), failed (i.e. the case in which the money pledged were lower than the goal), cancelled, live, suspended and undefined.</li>
+                  <li>The <i>backers</i> which represents the number of people that support this project;</li>
+                  <li>The <i>usd_pledged_real</i> which is, considering that not all the projects use the same currency, the conversion of the USD dollars of the pledged column;</li>
+                  <li>The <i>usd_goal_real</i> which is, as the usd_pledged_real, the conversion of the USD dollars of the pledged column.</li>
+                </ul>
+                To avoid the slowness of page loading, as consequence of the weight of the whole dataset, it has been filtered using a Jupyter 
+                Python Notebook to delete the rows and the columns that have not been used in the specific visualisation. 
+                The data-sets of filtered data and the code used to obtain them have been uploaded on <a href = "https://github.com/antoniolch/KickstarterProjectDetails">this</a href> Github Repository.</br>
+               </td>
+            </tr>
+            <tr>
+               <td style="vertical-align: top;"><strong>Initial questions</strong></td>
+               <td style="vertical-align: top;">
+                  Regarding the <i>Robot</i>, <i>3D Printing</i> and <i>Software</i> categories, how the number of projects launched 
+                  vary across the years from 2014 to 2017? Is the pattern consistent between these three categories?
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <hr />
+      <div id="vis"></div>
+      <hr />
+      <table style="width: 850px;" cellspacing="5" cellpadding="5">
+         <tbody>
+            <tr>
+               <td style="width: 200px; vertical-align: top;"><strong>Description:&nbsp;</strong></td>
+               <td style="vertical-align: top;">
+                  This line chart aims to show how the number of projects launched in the main category 
+                  <i>Technology</i> vary during the period from 2014 to 2017, considering the <i>Robot</i>, <i>3D Printing</i> and <i>Software</i> sub-category. 
+                  The tooltip is not used here because useless in this context.
+               </td>
+            </tr>
+            <tr>
+               <td style="vertical-align: top;"><strong>Insight:</strong></td>
+               <td style="vertical-align: top;">
+                  Using this line chart, it is possible to see the trend during the years from 2014 to 2017 regarding respectively the <i>3D Printing</i>, 
+                  the <i>Robots</i> and the <i>Software</i> categories. This graph shows that there was a great increase in the number of projects launched in the 2015 in each category. 
+                  However, <i>Software</i> category has had a greater interesting then the other two, considering the number of projects launched in the whole period. 
+                  Then, the pattern that comes up from this analysis is the general increase in the number of projects launched during 2015 followed by a slight decrease during the following years.
+               </td>
+            </tr>
+            <tr>
+               <td style="vertical-align: top;"><strong>Design considerations</strong></td>
+               <td style="vertical-align: top;">
+                  It has been used a line chart because it is the best way to spot and compare trends as which seen before. 
+                  Colours have been also used to encode the different analysed categories. The colours choice is made according to the 
+                  <a href="https://public.tableau.com/views/TableauColors/ColorPaletteswithRGBValues?%3Aembed=y&%3AshowVizHome=no&%3Adisplay_count=y&%3Adisplay_static_image=y">Colour Blind 10 palette</a> 
+                  to make everyone able to decode the graph.<br>
+                  The alternative that has been analysed for this kind of analysis was the Grouped Bar Chart with a group for each year. The positive aspects of the grouped bar chart is that it
+                  makes easier the comparison between the three categories for each year but it makes too hard the identification of a trend.
+                  The reason why it has been chosen the line chart is that it is more expressive to spot trends and  
+                  it is the best way to answer to the specific question above. 
+               </td>
+            </tr>
+            <tr>
+               <td style="width: 200px; vertical-align: top;"><strong>Data filtering and transformation:&nbsp;</strong></td>
+               <td style="vertical-align: top;">
+                  As well as in the previous visualisations it has been used the python code for filtering data and build specific dataset for this visualisation. 
+                  In particular the columns that differ from "ID", "category" and "launched" for the categories <i>3D Printing</i>, <i>Robots</i> , <i>Software</i> have been deleted.
+                  Obviously, the same filter can be applied directly inside the Vega-Lite code, but it has been used the python code to make the page loading much faster.
+                  The filters used inside the Vega-Lite code made possible the restriction over the years from 2014 to 2017.                  
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <script type="text/javascript">
+        var yourVlSpec =    {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/antoniolch/KickstarterProjectDetails/master/whole_kickstarter_projects_filtered_vis3.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"launched": "utc:'%Y-%m-%d %H:%M:%S'"}
+      }
+  },
+  "title": {
+    "text": "Robot and 3D Printing Launch",
+    "anchor": "middle",
+    "fontSize": 15
+  },
+  "width": 400,
+  "height": 400,
+  "transform": [
+    { "filter": "year(datum.launched) > 2013" },
+    { "filter": "year(datum.launched) < 2018" }
+  ], 
+  "mark": {"type": "line"},
+  "encoding": {
+    "y": {
+      "field": "ID",
+      "title": "Number of Projects Launched",
+      "aggregate":"count",
+      "type": "quantitative"
+    },
+    "x": {
+      "field": "launched",
+      "timeUnit":"year",
+      "title": "Year",
+      "type": "ordinal",
+      "axis": { "labelAngle": 0 }
+    },
+    "color":{
+      "field": "category",
+      "type": "nominal",
+      "legend": {
+         "title": "Category",
+         "orient": "top-right"
+      },
+      "scale": { 
+        "range": [ "rgb(255,128,14)", "rgb(0,107,164)", "rgb(171,171,171)" ] 
+      }
+    }
+  }
+}
+            vegaEmbed("#vis", yourVlSpec);
+      </script>
+   </body>
+</html>
