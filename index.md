@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-<script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
-Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 # The Project
 
